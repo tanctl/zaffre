@@ -1,0 +1,21 @@
+[package]
+name = "example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+anchor-lang = { version = "0.30", features = ["init-if-needed"] }
+solana-program = "1.18"
+zaffre-anchor = { path = "../../zaffre-anchor" }
+zaffre-core = { path = "../../zaffre-core" }
+
+[dev-dependencies]
+solana-program-test = "1.18"
+solana-sdk = "1.18"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+
+[workspace]
