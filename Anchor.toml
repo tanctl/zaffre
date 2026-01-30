@@ -1,0 +1,23 @@
+[toolchain]
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+example = "HDGiZbLeKG5XqixDtAQb9dzuCiCTVP7Yg6En3ZyDHXM1"
+
+[programs.localnet]
+example = "HDGiZbLeKG5XqixDtAQb9dzuCiCTVP7Yg6En3ZyDHXM1"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test"
+
+[hooks]

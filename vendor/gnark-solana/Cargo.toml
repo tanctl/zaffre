@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "crates/verifier-lib",
+    "crates/verifier-bin",
+]
+
+resolver = "2"
+
+[patch.crates-io]
+proc-macro-crate = { path = "/home/tanya/zaffre/vendor/proc-macro-crate-3.1.0" }
+
+[workspace.metadata.docs.rs]
+# To build locally, use 
+# RUSTDOCFLAGS="--html-in-header docs-header.html" cargo doc --no-deps --document-private-items --open
+rustdoc-args = ["--html-in-header", "docs-header.html"]
+cargo-args = ["--no-deps", "--document-private-items"]

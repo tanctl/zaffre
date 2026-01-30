@@ -1,0 +1,22 @@
+[workspace]
+members = ["zaffre-core", "zaffre-anchor"]
+exclude = ["zaffre-prover"]
+# Note: zaffre-prover is excluded because it has incompatible dependencies
+# (arkworks requires zeroize 1.7+, but solana-program requires zeroize <1.4).
+# Build zaffre-prover separately with: cd zaffre-prover && cargo build
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0"
+
+[workspace.dependencies]
+solana-program = "1.18"
+anchor-lang = "0.30"
+thiserror = "1.0"
+getrandom = { version = "0.2", features = ["js"] }
+borsh = "1.0"
+
+[profile.release]
+overflow-checks = true

@@ -1,0 +1,9 @@
+[package]
+name = "zaffre-anchor"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anchor-lang.workspace = true
+solana-program.workspace = true

@@ -1,0 +1,32 @@
+[package]
+name = "gnark-verifier-solana"
+version = "1.0.0"
+edition = "2021"
+license="Apache-2.0"
+authors=["Reilabs"]
+repository = "https://github.com/reilabs/sunspot/tree/main/gnark-solana/crates/verifier-lib"
+description = "A library to verify Gnark proofs on solana"
+
+[lib]
+crate-type = [ "lib"]
+
+[dependencies]
+ark-serialize = "0.4"
+ark-ff = "0.5.0"
+ark-ec = "0.5.0"
+ark-test-curves = "0.5.0"
+solana-bn254 = "=2.2.2"
+thiserror = "2.0.17"
+ark-bn254 = "0.5"
+solana-program = "=1.18.26"
+num-traits = "0.2"
+blake3 = { version = "1.8.2", default-features = false, features = ["pure"] }
+sha2 = "0.10.9"
+
+[dev-dependencies]
+num-bigint = "0.4"
+ark-ec = "0.5.0"
+ark-std = "0.5.0"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

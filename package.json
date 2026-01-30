@@ -1,0 +1,19 @@
+{
+  "name": "zaffre",
+  "version": "1.0.0",
+  "description": "Zaffre is a privacy‑tooling SDK for Solana that lets apps store state at **commitment‑derived PDAs** and verify **zero‑knowledge proofs of ownership** on‑chain. It makes it easy to: - derive PDAs from a commitment instead of a public key, - recompute an action hash on‑chain, - verify a Groth16 proof (via Sunspot) that the caller knows the secret   behind the commitment used to derive that PDA.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4"
+  }
+}

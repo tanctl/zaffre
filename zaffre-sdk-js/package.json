@@ -1,0 +1,23 @@
+{
+  "name": "zaffre-sdk-js",
+  "version": "0.1.0",
+  "description": "WASM/JS bindings for Zaffre unlinkable PDAs",
+  "license": "GPL-3.0",
+  "files": [
+    "pkg",
+    "js",
+    "LICENSE"
+  ],
+  "main": "js/index.js",
+  "types": "js/index.d.ts",
+  "scripts": {
+    "build": "wasm-pack build --target bundler",
+    "build:node": "wasm-pack build --target nodejs"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0"
+  },
+  "devDependencies": {
+    "wasm-pack": "^0.12.1"
+  }
+}
